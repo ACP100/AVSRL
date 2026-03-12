@@ -1,0 +1,19 @@
+behaviors:
+  road_defence:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 64
+      buffer_size: 8192
+      learning_rate: 0.003
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: true
+      hidden_units: 256
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 2.0
+    max_steps: 5000000
+    time_horizon: 128
+    summary_freq: 1000

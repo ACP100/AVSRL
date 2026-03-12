@@ -1,0 +1,29 @@
+behaviors:
+  track_final_2:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 256                # Number of samples per training step
+      buffer_size: 2048              # Number of experiences to collect before updating the model
+      learning_rate: 0.0003          # Learning rate for gradient descent
+      beta: 0.09                     # Strength of entropy regularization (encourages exploration)
+      epsilon: 0.2                   # Clipping parameter for policy updates
+      lambd: 0.95                    # GAE parameter balancing bias and variance
+      num_epoch: 3                   # Number of passes through the experience buffer during training
+      learning_rate_schedule: linear # Linearly decrease learning rate over time
+
+    network_settings:
+      normalize: true                # Normalize observations for stability
+      hidden_units: 512              # Number of units in each hidden layer
+      num_layers: 2                  # Number of hidden layers
+      vis_encode_type: simple        # Encoding type for visual observations
+
+    reward_signals:
+      extrinsic:
+        gamma: 0.99                  # Discount factor for rewards
+        strength: 1.0                # Weight of extrinsic rewards
+
+    keep_checkpoints: 5              # Number of checkpoints to keep during training
+    max_steps: 15000000              # Total number of steps to train the agent
+    time_horizon: 256                # Time horizon for experience collection
+    summary_freq: 12000              # Frequency (in steps) to write training summaries
+    threaded: true                   # Use threading for faster data collection

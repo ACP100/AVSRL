@@ -1,0 +1,28 @@
+behaviors:
+  track_sac:
+    trainer_type: sac # Soft Actor-Critic
+
+    hyperparameters:
+      batch_size: 256 # Number of samples per training step
+      buffer_size: 500000 # Replay buffer size for off-policy learning
+      learning_rate: 0.0003 # Learning rate for gradient descent
+      buffer_init_steps: 1000 # Number of steps to fill the buffer before training starts
+      tau: 0.005 # Soft update parameter for target networks
+      steps_per_update: 1 # Number of steps to take before updating the policy
+
+    network_settings:
+      normalize: true # Normalize observations for stability
+      hidden_units: 128 # Number of units in each hidden layer
+      num_layers: 2 # Number of hidden layers in the network
+      vis_encode_type: simple # Encoding type for visual observations (if applicable)
+
+    reward_signals:
+      extrinsic:
+        gamma: 0.99 # Discount factor for rewards
+        strength: 1.0 # Weight of extrinsic rewards
+
+    keep_checkpoints: 5 # Number of checkpoints to keep
+    max_steps: 5000000 # Total number of training steps
+    time_horizon: 64 # Time horizon for experience collection
+    summary_freq: 10000 # Frequency at which summaries are written to TensorBoard
+    threaded: true # Use threading for faster data collection
