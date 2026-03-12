@@ -36,7 +36,6 @@ Environment (road, mountains, crosswalks):
 3. Open the project in Unity and load `Assets/Scenes/SampleScene.unity`.
 4. Press Play. The agent should connect to the server at `127.0.0.1:5555`.
 
-<<<<<<< HEAD
 ## Training (Optional)
 1. Install the ML-Agents Python package that matches the Unity package version.
 2. Run training from the project root:
@@ -47,7 +46,6 @@ Environment (road, mountains, crosswalks):
 =======
 Obstacle Avoidance: These sensors provide the RL agent with high-fidelity vector observations regarding the proximity of track barriers, other vehicles, and road boundaries.
 ![Ray perception](images/image7.png)
->>>>>>> fad6bba63d9548fde7c5fcb9298c8d94648e5758
 
 ## Repo Structure
 - `Assets/` — Unity project assets and scripts
@@ -113,4 +111,3 @@ Road Design: RoadArchitec
 ![description](images/car.png)
 
 ![description](images/terrain_tv.png)
->>>>>>> fad6bba63d9548fde7c5fcb9298c8d94648e5758
