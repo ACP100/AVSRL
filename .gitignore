@@ -43,3 +43,10 @@ sysinfo.txt
 
 # Local outputs
 results/
+
+# Python
+__pycache__/
+python/output/
+
+
+report_text.txt
