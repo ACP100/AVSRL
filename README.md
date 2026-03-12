@@ -16,7 +16,7 @@ Model car:
 ![Model car](images/car.png)
 
 Environment (road, mountains, crosswalks):
-![Environment](images/terrain%20tv.png)
+![Environment](images/terrain_tv.png)
 
 ## Requirements
 - Unity **6000.0.37f1** (see `ProjectSettings/ProjectVersion.txt`)
