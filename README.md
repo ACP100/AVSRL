@@ -17,6 +17,7 @@ The simulation utilizes Unity's RayPerceptionSensor3D to emulate the functionali
 Spatial Awareness: Multiple rays are cast in a 360-degree arc around the vehicle to detect the distance and tags of surrounding objects.
 
 Obstacle Avoidance: These sensors provide the RL agent with high-fidelity vector observations regarding the proximity of track barriers, other vehicles, and road boundaries.
+![Ray perception](images/image7.png)
 
  2. Vision-Based Lane Detection
 
@@ -64,3 +65,10 @@ Language: C# (Environment Control) & Python (AI & CV)
 Computer Vision: OpenCV
 
 Road Design: RoadArchitec
+
+
+
+
+![description](images/car.png)
+
+![description](images/terrain_tv.png)
